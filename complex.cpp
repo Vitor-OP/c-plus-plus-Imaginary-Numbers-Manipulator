@@ -1,8 +1,8 @@
 #include "complex.hpp"
 #include "fasor.hpp"
     
-    //complex::complex(fasor f): real(f.get_amplitude()*std::cos(f.get_phase())), imag(f.get_amplitude()*std::sin(f.get_phase())) {}
-    //fasor::fasor(complex c): amplitude(std::sqrt(c.get_real()*c.get_real() + c.get_imag()*c.get_imag())), phase(std::atan2(c.get_imag(),c.get_real())) {}
+    //constructor from fasor
+    complex::complex(fasor c): real(c.get_amplitude()*std::cos(c.get_phase())), imag(c.get_amplitude()*std::sin(c.get_phase())) {}
 
     void complex::set_real(double r){
         real = r;
@@ -86,11 +86,12 @@
 
         return *this;
     }
-        
+
 //********************************************************************************************************************
 //*********************************************** FASOR CLASS ********************************************************
 //********************************************************************************************************************
 
+/*
     void fasor::set_amplitude(double a){
         amplitude = a;
     }
@@ -168,4 +169,5 @@
         return *this;
     }
 
+*/
 // #endif

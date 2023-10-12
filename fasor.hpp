@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <cmath>
+#include <math.h>
+#include "complex.hpp"
+
+class complex;
 
 class fasor {
 private:
@@ -13,8 +17,9 @@ public:
     fasor(double a, double p): amplitude(a), phase(p) {}
     fasor(double a): amplitude(a), phase(0) {}
     fasor(): amplitude(0), phase(0) {}
-    
-    fasor(complex c): amplitude(std::sqrt(c.get_real()*c.get_real() + c.get_imag()*c.get_imag())), phase(std::atan2(c.get_imag(),c.get_real())) {}
+
+    //fasor(complex c): amplitude(std::sqrt(c.get_real()*c.get_real() + c.get_imag()*c.get_imag())), phase(std::atan2(c.get_imag(),c.get_real())) {}
+    fasor(complex c);
 
     void set_amplitude(double a);
     void set_phase(double p);
